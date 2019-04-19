@@ -1,0 +1,62 @@
+列表有正负索引
+正索引从左往右 从0 开始
+负索引从右往左 从-1 开始  依次是 -1 -2  -3 ...-n
+len(列表名) 计算该列表有多少元素
+list.index(value) 意思就是列表中匹配到第一个value值索引是多少
+list.count(value) 意思就是列表中匹配value的次数
+列表访问修改：
+        list[索引]=value
+        索引不要超界
+list.append(object) 在列表尾部追加元素 返回None 时间复杂度是O(1)
+list.insert(index.object)在指定的索引处插入元素，时间复杂度是O（n）
+
+索引可以超上下界
+  超越上界，尾部追加
+  超越下界，头部追加
+
+list.extend(range(9)) 将可迭代对象的元素追加进来 返回None 就地修改
+ +  连接列表
+ *  将列表元素重复n次 返回新的列表
+
+list.remove(value)从左到右查找第一个匹配value的值，移除该元素  就地修改
+list.pop()不指定索引就从尾部弹出一个元素   
+list.pop([index])从指定索引处弹出一个元素
+list.clear() 清空列表所有元素，剩下一个空列表
+list.reverse() 将列表反转，返回None 就地修改
+lst.sort(key=None,reverse=False) 对列表元素进行排序，就地修改，默认升序
+lst.sort(key=None,reverse=True) 反转，降序
+    key一个函数，指定key如何排序
+in 查看元素是不是在该列表中
+  比如： 1 in lst  询问1是不是在列表lst中 在的话 返回True 不在的话 返回False
+
+lst9 = lst.copy() 浅copy  
+
+import copy 引用copy模板
+lst15 = copy.deepcopy(lst13) 深度copy
+
+
+随机数：
+
+import random 引用random模块
+random.randint(1,4) 随机出现1到4的之间的整数
+random.choice([1,3,4,9]) 从非空序列的元素中随机挑选一个元素
+random.randrange(1,55,3) 从指定范围内，按照递增集合中选一个随机数，缺省值为1
+random.shuffle(list) 就地打乱列表元素
+random.sample(population,k) 从样本空间或总体（序列或者集合类型）中随机取出k个不同的元素，返回一个新列表
+   比如：输入：random.sample(['a','b','c','d'],2)输出（随机两个元素）：['d', 'c']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
