@@ -1,0 +1,36 @@
+#把最大值放在最左边
+num = [1,4,9,0,23,2,7,90,3]
+length = len(num)
+for i in range(length):
+    maxindex = i
+    for j in range(i+1,length):
+        if num[maxindex] < num[j]:
+            maxindex = j
+    if i != maxindex:
+        num[i],num[maxindex] = num[maxindex],num[i]
+print(num)
+#把最大值最小值各自放在最左最右位置
+nums = [22,1,900,0,33,783482,32430,2,4]
+lenth = len(nums)
+count_swap = 0
+count_iter = 0
+minorigin = minidex
+for i in range(length//2+1):
+    maxindex = i
+    minindex = -i-1
+    minorigin = minindex
+    for j in range(i+1,length-i):
+        count_iter += 1
+        if nums[maxindex] < nums[j]:
+            maxindex = j
+        if nums[minindex] > nums[-j-1]:
+            minindex = -j - 1
+    if i != maxindex:
+        nums[i],nums[maxindex] = nums[maxindex],nums[i]
+        count_swap += 1
+        if i == minindex or i == length + minindex:
+            minindex = maxindex
+    if minorigin != minindex:
+        nums[minorigin],nums[minindex] = nums[minindex],nums[minorigin]
+        count_swap += 1
+print(nums,count_swap,count_iter) 
